@@ -10,6 +10,7 @@ class CrewMember : public Player {
         CrewMember(const std::string& name, int susLevel) : Player(name, susLevel){};
         void accusePlayer(Player& otherPlayer);
         void runTasks();
+        bool isImposter() const { return false; }
 };
 
 

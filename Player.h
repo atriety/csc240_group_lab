@@ -42,6 +42,8 @@ class Player {
         // Function: Sets the frozen status of the player.
         // Pre: isFrozen is a valid boolean value.
         // Post: Sets the frozen status of the player to the specified boolean value.
+        bool isImposter() const  { return true; }
+
     private:
         string name; // Name of the player
         int susLevel; // Suspicion level of the player

@@ -10,6 +10,7 @@ class Imposter : public Player {
         Imposter(const std::string& name, int susLevel) : Player(name, susLevel){};
         void freezePlayer(Player& otherPlayer);
         void sabotagePlayer(Player& otherPlayer);
+        bool isImposter() const { return true; }
 };
 
 #endif
