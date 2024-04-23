@@ -14,6 +14,7 @@ class Player {
         string getName();
         int getSusLevel();
         void setSusLevel(int susLevel);
+        void changeSusLevel(int susLevel);
         bool isFrozen();
         void setFrozen(bool isFrozen);
        
@@ -22,20 +23,5 @@ class Player {
         int susLevel;
         bool frozen = false;
 };
-
-
-class Crewmate: public Player {
-
-};
-
-
-class Imposter: public Player {
-
-
-// sort function to find highest level player
-// sort function to find lowest level player
-
-};
-
 
 #endif

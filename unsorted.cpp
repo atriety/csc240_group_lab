@@ -31,12 +31,14 @@ bool UnsortedType::IsFull() const
 }
 
 int UnsortedType::GetLength() const
+// Pre: UnsortedType is instantiated.
 // Post: Number of items in the list is returned.
 {
   return length;
 }
 
 void UnsortedType::MakeEmpty()
+// Pre: UnsortedType is instantiated.
 // Post: List is empty; all items have been deallocated.
 {
   NodeType* tempPtr;
