@@ -43,6 +43,11 @@ void Player::setSusLevel(int susLevel) {
     this->susLevel = susLevel;
 };
 
+void Player::changeSusLevel(int susAmount) {
+    int tempSus = this->susLevel + susAmount;
+    setSusLevel(tempSus);
+};
+
 bool Player::isFrozen() {
     return frozen;
 };
