@@ -1,0 +1,5 @@
+2024-04-18 Anhtriet created repo
+2024-04-20 Yichen added player class head and implementation, unsorted type header, unsorted type implementation
+2024-04-22 Anhtriet added imposter and crewmember classes, added changeSusLevel in player class
+2024-04-23 Yichen added game-over function and isImposter function, also added pre and post conditions for the player class 
+2024-04-24 Yichen added log and updated readme content, including project purpose, expected input/output and data structure chosen
