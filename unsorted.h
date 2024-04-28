@@ -1,4 +1,3 @@
-#include "ItemType.h" 
 #include "Player.h"
 #ifndef UNSORTED_H
 #define UNSORTED_H
@@ -62,11 +61,12 @@ class UnsortedType  {
         //       item is a copy of element at current position.
 
         void Print();
-        
+        // Print all elements in the list
+        // Post-condition: Prints all elements in the list if the list is not empty. If the list is empty, it prints "Empty list."
 
     private:
-        NodeType* listData;
-        int length;
-        NodeType* currentPos;
+        NodeType* listData; // current data
+        int length; // length of the list
+        NodeType* currentPos; //current position in the list
     };
 #endif

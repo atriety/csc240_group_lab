@@ -1,6 +1,7 @@
 #include "unsorted.h"
 #include <iostream>
 using namespace std;
+enum RelationType  {LESS, GREATER, EQUAL};
 
 struct NodeType
 {
@@ -151,7 +152,10 @@ UnsortedType::~UnsortedType()
   }
 }
 
-void UnsortedType::Print(){
+void UnsortedType::Print()
+// Print all elements in the list
+// Post-condition: Prints all elements in the list if the list is not empty. If the list is empty, it prints "Empty list."
+{
   ResetList();
 	if(length == 0){
 		cout << "Empty list." << endl;
@@ -162,7 +166,6 @@ void UnsortedType::Print(){
 			cout << playerTmp.toString() << endl;
 		}while(currentPos->next != NULL);
 	}
-	 
 }
 
 
