@@ -168,6 +168,30 @@ void UnsortedType::Print()
 	}
 }
 
+void UnsortedType::SortPlayers() 
+//Uses Bubble sort algorithm to sort players based on their Suslevels and prints out rankings.
+// Pre: players is a valid UnsortedType containing Player objects
+// Post: Sorts the players UnsortedType and prints the players rankings based on ascending order of susLevel.
+  {
+    ResetList();
+    if (GetLength() <= 1) {
+      return;
+    }
+    
+    for(int i = 0; i < GetLength() - 1; ++i) {
+      currentPos = listData;
+      for(int j = 0; j < GetLength() - i - 1; ++j){
+        if(currentPos->info.getSusLevel() > currentPos->next->info.getSusLevel()) {
+          Player tempPlayer = currentPos->info;
+          currentPos->info = currentPos->next->info;
+          currentPos->next->info = tempPlayer;
+        }
+        currentPos = currentPos->next;
+      }
+     }
+  }
+
+
 
 
 

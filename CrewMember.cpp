@@ -13,9 +13,9 @@ void CrewMember::accusePlayer(Player& otherPlayer){
 };
 
 void CrewMember::runTasks(){
-    if (getSusLevel() < 5) {
+    if (getSusLevel() < 5 && getSusLevel() > 0) {
         setSusLevel(0);
-    } else if (getSusLevel() == 0){
+    } else if (getSusLevel() <= 0){
         cout << "You have no sus but continue to do tasks which is sus..." <<endl;
         changeSusLevel(5);
     } else {

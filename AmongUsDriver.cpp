@@ -7,10 +7,9 @@
 
 using namespace std;
 void gameOver(UnsortedType& players);
+void printRankings(UnsortedType& players);
 
-// void showRankings() {
-// sort function to find sus levels and if frozen moved to bottom
-// }
+
 
 int main() {
     CrewMember player1("player1", 5);
@@ -32,8 +31,10 @@ int main() {
     players.PutItem(player1);
     players.PutItem(player2);
     players.PutItem(player3);
+    // players.SortPlayers();
     players.Print();
     gameOver(players);
+    printRankings(players);
     return 0;
 }
 
@@ -64,3 +65,25 @@ void gameOver(UnsortedType& players) {
         cout << "Impostors Win!" << endl;
     }
 }
+                     
+
+// Outputs the player's names and susLevels in ascending order
+// Pre: players is a valid UnsortedType containing Player objects
+// Post:Prints the name of the players in ascending order based on their susLevels.
+
+void printRankings(UnsortedType& players) {
+    players.SortPlayers();
+    if(players.GetLength() == 0){
+		cout << "Empty list." << endl;
+	} else{
+		Player playerTmp;
+        players.ResetList();
+        int i = 1;
+        cout << "Rank | Player | SusLevel" << endl;
+		while(i < players.GetLength()+1) {
+			playerTmp = players.GetNextItem();
+			cout << i << ".   " << playerTmp.getName() << "    " << playerTmp.getSusLevel() << endl;
+            i++;
+		};    
+    }
+}                    

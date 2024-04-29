@@ -64,6 +64,12 @@ class UnsortedType  {
         // Print all elements in the list
         // Post-condition: Prints all elements in the list if the list is not empty. If the list is empty, it prints "Empty list."
 
+        void SortPlayers();
+        //Uses Bubble sort algorithm to sort players based on their Suslevels and prints out rankings.
+        // Pre: players is a valid UnsortedType containing Player objects
+        // Post: Sorts the players UnsortedType and prints the players rankings based on ascending order of susLevel.
+
+
     private:
         NodeType* listData; // current data
         int length; // length of the list
